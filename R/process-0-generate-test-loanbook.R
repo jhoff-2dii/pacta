@@ -40,8 +40,8 @@ process.generateTestLoanbook <- function(
     Source = "pacta::process.generateTestLoanbook()",
     Reporting.Date = Sys.Date(),
     Facility.ID = paste("Facility", substr(0.1E10 + 1:n, 3, 10), sep = "-"),
-    Outstanding = {set.seed(seed); rpois(n, 1e3) * 1e3},
-    Exposure    = {set.seed(seed); rpois(n, 1e3) * 1e3},
+    Loan.Size..Outstandings. = {set.seed(seed); rpois(n, 1e3) * 1e3},
+    Loan.Size..Credit.Limit.    = {set.seed(seed); rpois(n, 1e3) * 1e3},
     Loan.Currency = "USD",
     Maturity.Date = Sys.Date() + as.integer({set.seed(seed+1000); rpois(n, 52)} * 7 * 3),
 
